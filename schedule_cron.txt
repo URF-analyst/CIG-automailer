@@ -1,0 +1,33 @@
+Source: https://towardsdatascience.com/how-to-schedule-python-scripts-with-cron-the-only-guide-youll-ever-need-deea2df63b4e
+
+How to Schedule Python Scripts With Cron — The Only Guide You’ll Ever Need
+
+Automate your Python script execution — works on Linux and macOS
+
+- Cron is one of the easiest ways to schedule tasks in Linux and macOS.
+- An automated Python script can do basically anything.
+- Crontab consists of six fields. The first five are reserved for the date and time of scheduled execution 
+  (minute, day of month, month of year, day of week), and the last field is reserved for a command to be executed.
+- make your python script.
+- https://crontab.guru/#*_*_*_*_* (easy to use) make crontab
+- open a terminal
+- get absolute path for script and python (use pwd and which python3)
+- now enter $ crontab -e (choose which editor u wish to use)
+- specify the scheduling pattern
+- (example)  */2 * * * * path/to/python /path/to/script/to/run.py
+* * * * * command to be executed
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)
+
+- save it
+- to verify do $ crontab -l 
+- (testing) test them
+- (stop) $ sudo service crond stop
+- (start) $ sudo service crond start 
+- (restart) $ sudo service crond restart
+- 
