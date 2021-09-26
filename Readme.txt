@@ -1,3 +1,4 @@
+Aug/21
 The idea "Quick response to corporates and people who wishes to contact CIG-IITR"
 '''
 Suppose some delegates of a corporation wishes to contact CIG-IITR. So they will fill the form
@@ -13,7 +14,7 @@ also send an automated reply to the delegates.
 
 comm.csv # demo table/db
 name,mail,timestamp,reason,connection
-timestamp is uix epoch timestamp (in seconds)
+timestamp is unix epoch timestamp (in seconds)
 
 Toschedule a python script in linux use cron. (see schedule_cron.txt)
 
@@ -35,7 +36,7 @@ oauth2client
 Readcsv v0
 v0
 -basic skeleton is done.
-v0p1
+v0p1 (sept/21)
 - added a feature that subsets only for last 3 hours data from all DBMS
 + (to be done) make a suitable python script task scheduler (currently using cron)
 + (") make it more secure
