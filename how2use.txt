@@ -1,0 +1,43 @@
+Oct/21 
+following file gives a gist on how to use this sub-set of data (alongside the reference materials link)
+
+1. run react app:
+goto main directory and open terminal.
+$ npm start
+
+2. github cli: 
+link : https://docs.github.com/en/get-started/quickstart/set-up-git
+(first go through basics of theory on git and github cli)
+install github cli and login.
+$ gh auth login
+download repo
+$ gh repo clone OWNER/REPO
+or fork existing repositories to your account
+$ gh repo fork OWNER/REPO
+$ git config -e
+Once done modifications:
+$ git checkout trunk # check u r modifying appropriate repo
+$ git fetch upstream #fetch updates
+$ git push
+$ git status
+
+updating repo after modifications:
+
+connect/check terminal linked to github-cli account
+{
+$ git remote add upstream https://github.com/your-git.git
+(Syncing Central Repo with Local Repo (only do this the initial time))
+}
+$ git pull upstream master (means pull from upstream whatever my master branch is tracking)
+$ git add . (there is a space between add and dot.)
+$ git commit -m " ur mssgs "
+$ git push origin master
+$ git status
+
+
+3. link firebase to google sheets: 
+link : https://websiddu.com/blog/sync-data-from-firebase-to-google-sheets.html
+
+Nov/21
+
+

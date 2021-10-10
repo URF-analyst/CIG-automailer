@@ -42,13 +42,21 @@ v0p1 (sept/21)
 + (") make it more secure
 + (") add auto schedule to run it every 3 hours.
 
-readGsheets v0 (to be done)
+readGsheets v0 (oct/21)
 v0 
 - uses an online googlesheets instead of csv as input dataframe.
+-use following data structure : 
+    name:"",    
+    corporation:"",
+    mail:"",    
+    Phone:"",   
+    msg:"",
+    deliver_lec:false,
+    start_proj:false,
+    conduct_workshop:false,
+    others:false,
+    (see comm2.csv)
 
-readDB v0 (to be done)
-v0
-- uses an online DBMS link/connection instead of csv as input dataframe.
 
 
 
