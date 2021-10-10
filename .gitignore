@@ -132,3 +132,4 @@ dmypy.json
 .bash_profile
 .tut_personal.txt
 .how2use.txt
+gsheet-secret-keys.json

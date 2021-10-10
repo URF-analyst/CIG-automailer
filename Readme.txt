@@ -43,6 +43,7 @@ v0p1 (sept/21)
 + (") add auto schedule to run it every 3 hours.
 
 readGsheets.py v0 (oct/21)
+readGsheets_t2.py v0 (oct/21) # uses no google api but can only read
 v0 
 - uses an online googlesheets instead of csv as input dataframe.
 - The person will fill form and it will be uploaded to a google-sheets

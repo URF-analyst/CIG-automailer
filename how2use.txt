@@ -38,6 +38,9 @@ $ git status
 3. link node to google sheets: 
 link : https://www.freecodecamp.org/news/react-and-googlesheets/
 
+!pip3 install gspread
+!pip3 install --upgrade google-api-python-client oauth2client 
+
 4. Python script automation (see schedule_cron.txt)
 
 5. run react app:

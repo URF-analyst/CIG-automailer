@@ -1,15 +1,11 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
 
-#t1 uses api to connect to google sheets
+# t2 does not uses google sheets api
 
 import os
 from datetime import datetime,timedelta
 import pandas as pd
-
-import gspread
-import pandas as pd
-from oauth2client.service_account import ServiceAccountCredentials
 
 import smtplib
 from tabulate import tabulate
@@ -20,15 +16,6 @@ tabulate.PRESERVE_WHITESPACE = True
 # gmail account n password for mailing
 g_user = os.environ['USER']
 g_password = os.environ['PASSWORD']
-
-# define the scope
-scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
-
-# add credentials to the account (sorry cannot share gsheet-secret-keys.json)
-creds = ServiceAccountCredentials.from_json_keyfile_name('gsheet-secret-keys.json', scope) 
-
-# authorize the clientsheet 
-client = gspread.authorize(creds)
 
 try:
     server_ssl = smtplib.SMTP_SSL('smtp.gmail.com', 465)
@@ -93,20 +80,17 @@ def main():
 
     #df = pd.read_csv ('comm2.csv')
     # get the instance of the Spreadsheet
-    sheet = client.open('DAmailer2021')
+    gsheet_url = os.environ['GSHEETURL']
+    GSurl = gsheet_url.replace('/edit#gid=', '/export?format=csv&gid=')
 
-    # get the first sheet of the Spreadsheet
-    sheet_instance = sheet.get_worksheet(0)
-    all_data = sheet_instance.get_all_records()
-    df = pd.DataFrame.from_dict(all_data)
-    #print (df.head())
+    df = pd.read_csv (GSurl)
     if  df.empty:
         exit()
     else:
         mailCIG(df)
         pass
 
-    #print(df)
+    print(df)
     # name,corporation,mail,Phone,msg,deliver_lec,start_proj,conduct_workshop,others,time,
     for ind in df.index:
          print(ind,df['name'][ind], df['mail'][ind])
