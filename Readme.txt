@@ -33,7 +33,7 @@ gspread
 google-api-python-client 
 oauth2client
 
-Readcsv v0
+Readcsv.py v0
 v0
 -basic skeleton is done.
 v0p1 (sept/21)
@@ -42,7 +42,7 @@ v0p1 (sept/21)
 + (") make it more secure
 + (") add auto schedule to run it every 3 hours.
 
-readGsheets v0 (oct/21)
+readGsheets.py v0 (oct/21)
 v0 
 - uses an online googlesheets instead of csv as input dataframe.
 -use following data structure : 

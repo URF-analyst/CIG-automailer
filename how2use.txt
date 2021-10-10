@@ -38,6 +38,8 @@ $ git status
 3. link firebase to google sheets: 
 link : https://websiddu.com/blog/sync-data-from-firebase-to-google-sheets.html
 
-Nov/21
+4. Python script automation (see schedule_cron.txt)
+
+Dec/21
 
 

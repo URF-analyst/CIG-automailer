@@ -130,4 +130,5 @@ dmypy.json
 
 # others
 .bash_profile
-.tut.txt
+.tut_personal.txt
+.how2use.txt
