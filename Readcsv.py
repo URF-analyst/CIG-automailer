@@ -10,8 +10,12 @@ from tabulate import tabulate
 import tabulate
 tabulate.PRESERVE_WHITESPACE = True
 
-g_user = os.environ['USER']
+from dotenv import load_dotenv
+load_dotenv()# look for a file named .env in the current directory and will add all the variable definitions 
+
+g_user = os.getenv('USER')
 g_password = os.getenv('PASSWORD')
+print (g_user,g_password)
 
 try:
     server_ssl = smtplib.SMTP_SSL('smtp.gmail.com', 465)
