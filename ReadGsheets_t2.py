@@ -2,8 +2,11 @@
 #!/usr/bin/python
 
 # t2 does not uses google sheets api
+# but sheet must be made public (anyone with link can view)
+
 
 import os
+import requests
 from datetime import datetime,timedelta
 import pandas as pd
 
@@ -13,9 +16,13 @@ from tabulate import tabulate
 import tabulate
 tabulate.PRESERVE_WHITESPACE = True
 
+from dotenv import load_dotenv
+load_dotenv()# look for a file named .env in the current directory and will add all the variable definitions 
+
 # gmail account n password for mailing
 g_user = os.environ['USER']
-g_password = os.environ['PASSWORD']
+g_password = os.getenv('PASSWORD')
+
 
 try:
     server_ssl = smtplib.SMTP_SSL('smtp.gmail.com', 465)
@@ -80,8 +87,13 @@ def main():
 
     #df = pd.read_csv ('comm2.csv')
     # get the instance of the Spreadsheet
-    gsheet_url = os.environ['GSHEETURL']
+    gsheet_url = os.getenv('GSHEETURL')
+    print (gsheet_url)
+    
     GSurl = gsheet_url.replace('/edit#gid=', '/export?format=csv&gid=')
+    print (GSurl)
+   
+    #GSurl = 
 
     df = pd.read_csv (GSurl)
     if  df.empty:

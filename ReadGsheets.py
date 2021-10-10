@@ -17,9 +17,13 @@ from tabulate import tabulate
 import tabulate
 tabulate.PRESERVE_WHITESPACE = True
 
+from dotenv import load_dotenv
+load_dotenv()# look for a file named .env in the current directory and will add all the var
+
 # gmail account n password for mailing
 g_user = os.environ['USER']
-g_password = os.environ['PASSWORD']
+g_password = os.getenv('PASSWORD')
+#g_password = os.environ['PASSWORD']
 
 # define the scope
 scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']

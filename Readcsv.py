@@ -11,7 +11,7 @@ import tabulate
 tabulate.PRESERVE_WHITESPACE = True
 
 g_user = os.environ['USER']
-g_password = os.environ['PASSWORD']
+g_password = os.getenv('PASSWORD')
 
 try:
     server_ssl = smtplib.SMTP_SSL('smtp.gmail.com', 465)
