@@ -1,4 +1,4 @@
-Name,mail,timestamp,reason,connection
-xyz abc,a09.abhishek@gmail.com,1632569080,just want to check,0
-ram rom,ai@bot.net,1632688180,i am a bot,1
-ram-rom2,ai2@bot.net,1632688380,i am not a bot,1
+name,corporation,mail,Phone,msg,deliver_lec,start_proj,conduct_workshop,others,time,
+xyz abc,bigdataWiz, a09.abhishek@gmail.com,just want to check,0,0,0,1,1632569080,
+ram rom,Skynett, ai@bot.net,2375000000,i will be back,i am a bot,1,0,0,0,1632688180
+ram-rom2,Borgg, ai2@bot.net,2908199700,we r the borg,i am not a bot,1,01,0,1632688380

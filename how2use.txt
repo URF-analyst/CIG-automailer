@@ -1,9 +1,9 @@
 Oct/21 
 following file gives a gist on how to use this sub-set of data (alongside the reference materials link)
 
-1. run react app:
-goto main directory and open terminal.
-$ npm start
+1. gmail to python link: (Authenticating with Gmail)
+see: https://realpython.com/python-send-email/
+
 
 2. github cli: 
 link : https://docs.github.com/en/get-started/quickstart/set-up-git
@@ -35,10 +35,14 @@ $ git push origin master
 $ git status
 
 
-3. link firebase to google sheets: 
-link : https://websiddu.com/blog/sync-data-from-firebase-to-google-sheets.html
+3. link node to google sheets: 
+link : https://www.freecodecamp.org/news/react-and-googlesheets/
 
 4. Python script automation (see schedule_cron.txt)
+
+5. run react app:
+goto main directory and open terminal.
+$ npm start
 
 Dec/21
 

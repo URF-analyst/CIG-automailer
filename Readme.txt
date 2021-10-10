@@ -16,7 +16,7 @@ comm.csv # demo table/db
 name,mail,timestamp,reason,connection
 timestamp is unix epoch timestamp (in seconds)
 
-Toschedule a python script in linux use cron. (see schedule_cron.txt)
+To schedule a python script in linux use cron. (see schedule_cron.txt)
 
 Using python 3.8.10
 Sept/2021
@@ -45,16 +45,19 @@ v0p1 (sept/21)
 readGsheets.py v0 (oct/21)
 v0 
 - uses an online googlesheets instead of csv as input dataframe.
--use following data structure : 
+- The person will fill form and it will be uploaded to a google-sheets
+- The python code "readGsheets.py" will read googlesheets and send mail automatically.
+- using following data structure : 
     name:"",    
     corporation:"",
     mail:"",    
     Phone:"",   
     msg:"",
-    deliver_lec:false,
-    start_proj:false,
-    conduct_workshop:false,
-    others:false,
+    deliver_lec:true/false,
+    start_proj:true/false,
+    conduct_workshop:true/false,
+    others:true/false,
+    time (#timestamp-unix).
     (see comm2.csv)
 
 

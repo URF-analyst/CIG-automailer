@@ -23,7 +23,7 @@ except:
 
 def mailCIG(df1):
     
-    sent_from = 'aaurfanalyst@gmail.com'
+    sent_from = g_user
     #to = 'teamCIG@iitr.ac.in'
     to = 'a09.abhishek@gmail.com'
     subject = "Alert! CIG response team you have a Guest"
@@ -49,7 +49,7 @@ def mailCIG(df1):
 
 def mailGuest(mailID):
     
-    sent_from = 'aaurfanalyst@gmail.com'
+    sent_from = g_user
     to = mailID
     print (type(to))
     subject = "IITR CIG will be with you in a moment"
